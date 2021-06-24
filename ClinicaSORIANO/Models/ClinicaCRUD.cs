@@ -10,12 +10,12 @@ namespace ClinicaSORIANO.Models
    public class ClinicaCRUD
     {
         public SQLiteConnection Conexion { get; set; }
-        //public string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "/clinicaSORIANOdb";
+     
          
         public ClinicaCRUD()
         {
             Conexion = new SQLiteConnection("./Data/clinicaSORIANO.db");
-            //Conexion = new SQLiteConnection("C:/Users/Jos3a/source/repos/Unidad4/ClinicaSORIANO/Data/clinicaSORIANO.db");
+            
         }
         public List<string> Errores { get; set; }
         public bool Insert(Paciente p)
@@ -80,42 +80,7 @@ namespace ClinicaSORIANO.Models
             {
                 Errores.Add("Falta el ID");
             }
-            //if (string.IsNullOrWhiteSpace(clon.Nombre))
-            //{
-            //    Errores.Add("Llene el campo nombre");
-            //}
-            //if (string.IsNullOrWhiteSpace(clon.ApellidoP))
-            //{
-            //    Errores.Add("Llene el campo apellido paterno");
-            //}
-            //if (string.IsNullOrWhiteSpace(clon.ApellidoM))
-            //{
-            //    Errores.Add("Llene el campo apellido materno");
-            //}
-            //if (string.IsNullOrWhiteSpace(clon.Telefono))
-            //{
-            //    Errores.Add("Llene el campo telefono");
-            //}
-            //if (string.IsNullOrWhiteSpace(clon.FechaN))
-            //{
-            //    Errores.Add("Llene el campo fecha de nacimiento");
-            //}
-            //if (string.IsNullOrWhiteSpace(clon.Tratamiento))
-            //{
-            //    Errores.Add("Llene el campo tratamiento");
-            //}
-            //if (string.IsNullOrWhiteSpace(clon.FechaCita))
-            //{
-            //    Errores.Add("Llene el campo nombre");
-            //}
-            //if (string.IsNullOrWhiteSpace(clon.FechaCita))
-            //{
-            //    Errores.Add("Llene el campo nombre");
-            //}
-            //if (string.IsNullOrWhiteSpace(clon.Hora))
-            //{
-            //    Errores.Add("Llene el campo hora");
-            //}
+            
             if (string.IsNullOrWhiteSpace(clon.Nombre))
             {
                 Errores.Add("Llene el campo nombre");
